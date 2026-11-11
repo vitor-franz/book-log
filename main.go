@@ -1,26 +1,14 @@
 package main
 
 import (
-	"log/slog"
+	"log"
 
-	"github.com/vitor-franz/book-log/modules/auth"
+	"github.com/vitor-franz/book-log/infrastructure"
 )
 
 func main() {
-	err := start()
+	err := infrastructure.Start()
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
-}
-
-func start() error {
-	authRepository := auth.NewRepository()
-
-	authUseCase := auth.NewUseCase(authRepository)
-
-	auth.NewModule(authUseCase)
-
-	slog.Info("started application")
-
-	return nil
 }

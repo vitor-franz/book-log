@@ -1,0 +1,16 @@
+[DatabaseSettings]
+    Host = "example"
+    Port = 0
+    Username = "example"
+    Password = "example"
+    Name = "example"
+
+[JWTSettings]
+    Secret = "example"
+    InsecureCookie = false
+
+[RuntimeSettings]
+    Environment = "example"
+
+[LoggerSettings]
+    OutputPath = "example"
